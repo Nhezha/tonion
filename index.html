@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TONION - The Spiciest Token on TON</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #2c0e37, #1a0922);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: rgba(44, 14, 55, 0.8);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffa500;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff7f00;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #ffa500;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffa500;
+            color: #2c0e37;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff7f00;
+        }
+
+        .features {
+            padding: 80px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #ffa500;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: rgba(255, 165, 0, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ffa500;
+        }
+
+        .mascot {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .mascot img {
+            max-width: 300px;
+            margin-bottom: 30px;
+        }
+
+        .mascot h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffa500;
+        }
+
+        .mascot p {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: rgba(44, 14, 55, 0.8);
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .floating-coins {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+
+        .coin {
+            position: absolute;
+            background-color: rgba(255, 165, 0, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .features h2, .mascot h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#mascot">Mascot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="floating-coins" id="floatingCoins"></div>
+            <div class="hero-content">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/600x200.jpg-UohGQ3HUJBQCty4Bx4L2LNecloL2LO.jpeg" alt="TONION Logo" style="max-width: 300px; margin-bottom: 20px;">
+                <h1>The Spiciest Token on TON</h1>
+                <p>Tonion is a meme token built on the #TON network, inspired by the idea of a multi-layered blockchain and the iconic onion. Fun, friendly, and incredibly spicy.</p>
+                <a href="#" class="btn">Buy TONION</a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Why Choose TONION?</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Y675uIgY_400x400.jpg-QVaC7Jji8FbDNxuIUnjtUi4sylpwHO.jpeg" alt="Rocket Icon">
+                        <h3>To The Moon</h3>
+                        <p>Join our journey to the stars with the most innovative meme token on TON.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Y675uIgY_400x400.jpg-QVaC7Jji8FbDNxuIUnjtUi4sylpwHO.jpeg" alt="Wallet Icon">
+                        <h3>Secure Storage</h3>
+                        <p>Your TONIONs are safely stored in the most reliable blockchain network.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Y675uIgY_400x400.jpg-QVaC7Jji8FbDNxuIUnjtUi4sylpwHO.jpeg" alt="Community Icon">
+                        <h3>Community First</h3>
+                        <p>Join our vibrant community of TONION holders and believers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mascot" class="mascot">
+            <div class="container">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GdPWUI5XkAALEUU.jpg-SYzqxXbqv7f1pFRLH5jb4lj0ZbFsBG.jpeg" alt="TONION Mascot">
+                <h2>Meet Your New Favorite Token</h2>
+                <p>TONION combines the security of TON blockchain with the fun of meme culture. Our mascot represents the layers of innovation we bring to the crypto space.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 TONION. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Floating coins animation
+        function createFloatingCoins() {
+            const container = document.getElementById('floatingCoins');
+            const coinCount = 20;
+
+            for (let i = 0; i < coinCount; i++) {
+                const coin = document.createElement('div');
+                coin.classList.add('coin');
+                coin.style.width = `${Math.random() * 20 + 10}px`;
+                coin.style.height = coin.style.width;
+                coin.style.left = `${Math.random() * 100}%`;
+                coin.style.top = `${Math.random() * 100}%`;
+                
+                const duration = Math.random() * 10 + 5;
+                const delay = Math.random() * 5;
+                
+                coin.style.animation = `float ${duration}s ${delay}s infinite alternate`;
+                
+                container.appendChild(coin);
+            }
+        }
+
+        // Call the function when the page loads
+        window.addEventListener('load', createFloatingCoins);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add this to your existing <style> tag
+        document.head.insertAdjacentHTML('beforeend', `
+            <style>
+                @keyframes float {
+                    0% {
+                        transform: translateY(0) rotate(0deg);
+                    }
+                    100% {
+                        transform: translateY(-100px) rotate(360deg);
+                    }
+                }
+            </style>
+        `);
+    </script>
+</body>
+</html>
